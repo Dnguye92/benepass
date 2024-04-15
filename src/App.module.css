@@ -33,7 +33,7 @@
 }
 
 .benepassCardNumberContentContainer {
-  @apply flex flex-row gap-3 items-center mt-6;
+  @apply flex flex-row gap-4 items-center mt-6;
 }
 
 .benepassCardNumberContentActive {

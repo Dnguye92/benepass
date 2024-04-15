@@ -14,6 +14,7 @@ function App() {
   const [isChecked, setIsChecked] = useState(false);
   const cx = classNames.bind(styles);
 
+  // create binded class names to dynamically set styles
   const benepassCardNumberContentContainerClassName = cx({
     [styles.benepassCardNumberContentContainer]: true,
     [styles.benepassCardNumberContentActive]: isChecked ? true : false
