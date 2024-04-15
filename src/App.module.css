@@ -1,0 +1,129 @@
+.benepassCardContainer {
+  @apply text-white flex mt-6;
+}
+
+.benepassCardInfoContainer {
+  @apply mt-6 ml-3.5;
+}
+
+.benepassCardInfoHeader {
+  @apply font-medium leading-8;
+  font-size: 26px;
+}
+
+.benepassCardInfoDescription {
+  @aply font-normal leading-8;
+  font-size: 20px;
+}
+
+.benepassCardBgContainer {
+  @apply bg-cover bg-no-repeat bg-center relative w-full;
+  max-width: 392px;
+  height: 272px;
+}
+
+.benepassCardContentContainer {
+  @apply absolute m-6 top-1 left-3.5 w-full;
+  max-width: 316px;
+  height: 230px;
+}
+
+.benepassCardTopContentContainer {
+  @apply flex flex-row justify-between;
+}
+
+.benepassCardNumberContentContainer {
+  @apply flex flex-row gap-3 items-center mt-6;
+}
+
+.benepassCardDetailsContentContainer {
+  @apply flex flex-row gap-6 mt-6;
+}
+
+.ccDetailName {
+  @apply text-xs font-medium;
+  color: #D3D2DE;
+}
+
+.ccDetailValue {
+  @apply text-lg font-medium;
+}
+
+.ccDetailZipcode {
+  @apply text-lg font-normal;
+}
+
+.benepassCardBottomContainer {
+  @apply flex flex-row justify-between mt-6;
+}
+
+.ellipseGroupMd {
+  @apply h-1.5;
+  width: 42px;
+}
+
+.ellipseGroupSm {
+  @apply h-1.5 mt-2;
+  width: 30px;
+}
+
+.ccNumber {
+  @apply font-medium;
+  font-size: 26px;
+}
+
+.ccCVCContainer {
+  @apply flex flex-col;
+}
+
+.showDetailsContainer {
+  @apply flex flex-row gap-3;
+}
+
+.showDetailsContent {
+  @apply text-base;
+}
+
+.showDetailsActive {
+  @apply font-medium;
+  color: #ED0E61;
+}
+
+input {
+  @apply h-5 w-5;
+  border-color: #9EA6B4;
+}
+
+.inputActive {
+  @apply text-base font-medium;
+  color: #ED0E61;
+}
+
+[type="checkbox"] {
+  @apply opacity-0;
+}
+
+[type="checkbox"] + label, [type="checkbox"]:checked + label {
+  @apply cursor-pointer inline-block relative pl-9 text-base;
+}
+
+[type="checkbox"] + label::before {
+  @apply absolute h-5 w-5 rounded top-0 left-0;
+  content: "";
+  outline: 1px solid #9EA6B4;
+}
+
+[type="checkbox"]:checked + label::before {
+  @apply absolute h-5 w-5 rounded top-0 left-0;
+  content: "";
+  outline: 1px solid #ED0E61;
+  background-color: #ED0E61;
+}
+
+[type="checkbox"]:checked + label::after {
+  @apply absolute bg-contain left-1.5 top-1.5 rounded h-1.5;
+  content: "";
+  width: 9px;
+  outline: 1px solid #ED0E61;
+  background-image: url("./assets/check.svg");
+}

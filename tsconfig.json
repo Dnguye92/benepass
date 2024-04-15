@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "rootDir": "./",
+    "outDir": "./dist",
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.css"],
+  "exclude": ["node_modules"]
+}
