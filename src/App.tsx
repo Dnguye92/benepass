@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import classNames from 'classnames/bind';
 import benepassCardBg from './assets/BG.svg';
 import logo from './assets/logo-white.svg';
@@ -7,7 +8,6 @@ import ellipseGroupMd from './assets/ellipse-group-md.svg';
 import ellipseGroupSm from './assets/ellipse-group-sm.svg';
 import styles from './App.module.css';
 import './index.css';
-import { useState } from 'react';
 
 function App() {
   // initialize state variables
