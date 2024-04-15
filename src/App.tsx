@@ -10,39 +10,37 @@ import './index.css';
 import { useState } from 'react';
 
 function App() {
+  // initialize state variables
   const [isChecked, setIsChecked] = useState(false);
   const cx = classNames.bind(styles);
 
-  const benepassCardContainer = cx({
-    [styles.benepassCardContainer]: true
+  const benepassCardNumberContentContainerClassName = cx({
+    [styles.benepassCardNumberContentContainer]: true,
+    [styles.benepassCardNumberContentActive]: isChecked ? true : false
   });
 
-  const benepassCardContentContainer = cx({
-    [styles.benepassCardContentContainer]: true
-  });
-
-  const benepassCardBgContainer = cx({
-    [styles.benepassCardBgContainer]: true
-  });
-
-  const inputClassname = cx({
+  const inputLabelClassname = cx({
     [styles.inputActive]: isChecked ? true : false
-  })
+  });
 
+  // create onChange function to handle when checkbox is clicked
   const handleOnChange = () => {
     setIsChecked(!isChecked);
   };
 
   return (
     <div>
+      {/* Card Info Description Container */}
       <div className={styles.benepassCardInfoContainer}>
         <p className={styles.benepassCardInfoHeader}>Flex card</p>
         <p className={styles.benepassCardInfoDescription}>Used for pre-tax purchases</p>
       </div>
-      <div className={benepassCardContainer}>
-        <div className={benepassCardBgContainer}>
+      {/* Benepass Virtual Card Container */}
+      <div className={styles.benepassCardContainer}>
+        <div className={styles.benepassCardBgContainer}>
           <img src={benepassCardBg} alt="benepass-bg" className={styles.benepassCardBg}/>
-          <div className={benepassCardContentContainer}>
+          {/* Benepass Virtual Card Content Container */}
+          <div className={styles.benepassCardContentContainer}>
             <div className={styles.benepassCardTopContentContainer}>
               <div>
                 <img src={logo} alt="logo" />
@@ -51,7 +49,7 @@ function App() {
                 <img src={tag} alt="tag" />
               </div>
             </div>
-            <div className={styles.benepassCardNumberContentContainer}>
+            <div className={benepassCardNumberContentContainerClassName}>
               {isChecked ? (
                 <p className={styles.ccNumber}>1232 2223 4432</p>
               ) : (
@@ -84,6 +82,7 @@ function App() {
           </div>
         </div>
       </div>
+      {/* Container for the 'Show details' checkbox */}
       <div className={styles.showDetailsContainer}>
         <form>
           <p>
@@ -94,7 +93,7 @@ function App() {
               checked={isChecked}
               onChange={handleOnChange}
             />
-            <label htmlFor="checkbox" className={inputClassname}>Show details</label>
+            <label htmlFor="checkbox" className={inputLabelClassname}>Show details</label>
           </p>
         </form>
       </div>

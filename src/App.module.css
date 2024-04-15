@@ -36,6 +36,10 @@
   @apply flex flex-row gap-3 items-center mt-6;
 }
 
+.benepassCardNumberContentActive {
+  @apply gap-2;
+}
+
 .benepassCardDetailsContentContainer {
   @apply flex flex-row gap-6 mt-6;
 }
@@ -126,4 +130,14 @@ input {
   width: 9px;
   outline: 1px solid #ED0E61;
   background-image: url("./assets/check.svg");
+}
+
+@media (max-width: 375px) {
+  .benepassCardContentContainer {
+    max-width: 300px;
+  }
+  
+  .benepassCardNumberContentContainer, .benepassCardDetailsContentContainer, .benepassCardBottomContainer {
+    @apply mt-5;
+  }
 }
